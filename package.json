@@ -2,6 +2,9 @@
   "name": "blog-app",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "10.x"
+  },
   "main": "index.js",
   "scripts": {
     "start": "node server.js"
@@ -19,8 +22,5 @@
     "mongoose": "^6.1.8",
     "nodemon": "^2.0.15",
     "slugify": "^1.6.5"
-  },
-  "engines": {
-    "node": "10.x"
   }
 }
