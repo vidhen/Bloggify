@@ -3,10 +3,14 @@ const Article = require("./models/article")
 const articleRouter = require('./routes/articles')
 const mongoose = require("mongoose")
 const methodOverride = require('method-override')
+const dotenv = require("dotenv");
 
 
-mongoose.connect('mongodb://localhost/blog')
+dotenv.config();
 
+mongoose.connect(process.env.mongo_url)
+.then(console.log("Connected to MongoDB"))
+.catch((err) => console.log(err));
 
 
 const app = express();
